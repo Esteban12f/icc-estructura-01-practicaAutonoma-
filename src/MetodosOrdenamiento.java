@@ -162,7 +162,8 @@ public class MetodosOrdenamiento {
     // Método de inserción con errores
     // Error encontrado: En el segundo for todas las posiciones del arreglo estan entorno a j 
     // por lo que no realiza la comparacion y el cambio de forma correcta
-    // Correccion: En el segundo for se cambia la variable j por la variable i en todas las posiciones
+    // Correccion: En el segundo for se cambia la variable j por la variable i en todas las posiciones 
+    // para que se maneje de forma correcta los valores del arreglo
     public int[] insercionSegundo(int[] arregloOriginal) {
 
         int[] arreglo = Arrays.copyOf(arregloOriginal, arregloOriginal.length);
@@ -184,7 +185,9 @@ public class MetodosOrdenamiento {
     // 2. La condicion del while compara e itera de una manera en la que 
     //ordena el arreglo de mayor a menor
     // 3. La variable i esta creciendo por lo que llega a tener un valor 
-    //mayor al tamaño del arreglo
+    // mayor al tamaño del arreglo
+    // 4. El metodo retorna un nuevo arreglo y aunque no es un error, especificamente 
+    //se indica que se debe ordenar el arreglo ya definido en la clase App
     // Correcciones:
     // 1. Para poder comparar de forma correcta los numeros la varable i debe 
     // tomar un numero menor a la variable j "int i = j - 1"
@@ -192,6 +195,7 @@ public class MetodosOrdenamiento {
     // el operador de comparacion "<" se cambia por ">" 
     // 3. La varible i debe ir decrementando de uno en uno para que el while 
     // pueda terminar por lo que se debe colocar "i--"
+    // 4. Se debe retornar el arreglo deseado en este caso se escribe "return arreglo"
     public int[] insercionTercero(int[] arregloOriginal) {
 
         int[] arreglo = Arrays.copyOf(arregloOriginal, arregloOriginal.length);
